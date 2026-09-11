@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muwanguzi Simon & Esther Izabayo — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&family=Montserrat:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <header class="site-header">
+      <a href="#top" class="monogram" aria-label="Simon and Esther home">S<span>&</span>E</a>
+      <nav aria-label="Invitation navigation"><button data-page="1">Welcome</button><button data-page="2">Our story</button><button data-page="3">Gallery</button><button data-page="4">Details</button><button data-page="5">RSVP</button></nav>
+      <button class="sound" id="sound-button" aria-label="Toggle celebration music"><span>♪</span> <i>Music off</i></button>
+    </header>
+    <main id="top">
+      <section class="hero invite-page active" data-page-content="1">
+        <div class="arch arch-one"></div><div class="arch arch-two"></div>
+        <p class="eyebrow">The beginning of our forever</p><p class="script">A very special invitation</p><p class="open-prompt">Tap the envelope to open</p>
+        <button class="envelope-scene" id="envelope-toggle" aria-expanded="false" aria-label="Open wedding invitation envelope"><span class="envelope-back"></span><span class="letter"><i>Reserved for</i><b id="pass-guest-name">Our cherished guest</b><small><strong id="pass-guests">1</strong> guest · We invite you to celebrate<br />with us</small></span><span class="envelope-side left"></span><span class="envelope-side right"></span><span class="envelope-flap"></span><span class="seal">S<span>&amp;</span>E</span></button>
+        <div class="envelope-reveal" id="envelope-reveal"><p class="eyebrow">Together with their families</p><h1>Simon <em>&amp;</em> Esther</h1><div class="date-line"><span></span><p>Saturday · 21 · November</p><span></span></div><p class="year">Two thousand twenty-six</p><button class="rsvp-link page-next" data-next="2">See more details <b>↓</b></button></div>
+        <div class="hero-flower flower-left" aria-hidden="true">✿</div><div class="hero-flower flower-right" aria-hidden="true">❋</div>
+      </section>
+      <section class="intro invite-page cover-page" id="story" data-page-content="2">
+        <label class="cover-image" id="cover-image"><input type="file" id="cover-upload" accept="image/*" /><img id="cover-preview" alt="Simon and Esther cover photo" /><span><b>Simon &amp; Esther</b><small>Tap to add your beautiful cover photo</small></span></label>
+        <p class="eyebrow">The celebration begins</p><h2>Two hearts,<br />one beautiful forever.</h2><p class="copy">With joy in our hearts, we invite you to share in the beginning of our married life.</p><button class="page-next ink-button" data-next="3">Enter our story <span>→</span></button>
+      </section>
+      <section class="gallery-page invite-page" id="gallery" data-page-content="3"><p class="eyebrow">Moments to treasure</p><h2>Our gallery</h2><p class="copy">A few beautiful moments from our journey together.</p><label class="gallery-upload"><input type="file" id="gallery-input" accept="image/*" multiple /><span>+</span> Add your photos</label><div class="gallery-grid" id="gallery-grid"><div class="gallery-empty">Choose one or more photos to begin our gallery.</div></div><div class="page-actions gallery-actions"><button class="page-prev" data-prev="2">← Back</button><button class="page-next ink-button" data-next="4">Wedding details <span>→</span></button></div></section>
+      <section class="invite-page details-page" id="details" data-page-content="4"><div class="details">
+        <div class="detail-card ceremony"><p class="eyebrow">The ceremony</p><h3>At eleven o'clock</h3><p>Victory Church Christian Center<br />Ndeeba</p><a href="https://maps.google.com/?q=Victory+Church+Christian+Center+Ndeeba" target="_blank" rel="noreferrer">Open ceremony map <b>↗</b></a></div>
+        <div class="ring-art" aria-hidden="true"><div></div><span></span></div>
+        <div class="detail-card reception"><p class="eyebrow">Dinner &amp; dancing</p><h3>From six o'clock</h3><p>Mikeke Gardens, Zanna<br />Following the ceremony</p><a href="https://maps.google.com/?q=Mikeke+Gardens+Zanna" target="_blank" rel="noreferrer">Get directions <b>↗</b></a></div>
+      </div><section class="calendar-card"><p class="eyebrow">Save the date</p><div class="calendar-date"><span>Saturday</span><b>21</b><span>November · 2026</span></div><p>11:00 AM · Victory Church Christian Center, Ndeeba</p></section>
+      <section class="notes">
+        <div><p class="eyebrow">Dress code</p><h3>Garden formal</h3><p>Soft pastels, summer linens, and a little flourish encouraged.</p></div>
+        <div><p class="eyebrow">An unplugged moment</p><h3>Be all here</h3><p>Please tuck away phones during the ceremony. Our photographer has every memory covered.</p></div>
+        <div><p class="eyebrow">With love</p><h3>Adults only</h3><p>We adore your little ones, but have reserved this evening for our grown-up guests.</p></div>
+      </section><section class="countdown"><p class="script">Counting down to forever</p><div id="countdown-timer"><div><b>00</b><span>Days</span></div><div><b>00</b><span>Hours</span></div><div><b>00</b><span>Min</span></div><div><b>00</b><span>Sec</span></div></div></section><section class="gift-card"><p class="eyebrow">A gift from the heart</p><h3>Your presence is our greatest gift.</h3><p>For those who would like to bless our new beginning, a contribution may be sent by Mobile Money.</p><a href="#rsvp" class="page-next" data-next="5">View gift details <b>→</b></a></section><div class="page-actions"><button class="page-prev" data-prev="3">← Back</button><button class="page-next ink-button" data-next="5">RSVP to celebrate <span>→</span></button></div></section>
+      <section class="rsvp-section invite-page" id="rsvp" data-page-content="5">
+        <div class="rsvp-intro"><p class="eyebrow">Kindly respond by 15 September</p><h2>Will you join us?</h2><p>We cannot wait to celebrate with the people who have made our story so full of love.</p></div>
+        <form id="rsvp-form" class="rsvp-form">
+          <label>Your name<input required name="name" placeholder="First and last name" /></label><label>Email address<input required type="email" name="email" placeholder="you@example.com" /></label>
+          <label>Phone number<input required name="phone" inputmode="tel" placeholder="Your phone number" /></label><label>Guests attending<input required name="guests" type="number" min="1" value="1" /></label>
+          <div class="attendance"><p>Will you be celebrating with us?</p><label><input type="radio" name="attendance" value="Joyfully accepts" required /><span>Joyfully accepts</span></label><label><input type="radio" name="attendance" value="Regretfully declines" /><span>Regretfully declines</span></label></div>
+          <label>Dietary notes <small>(optional)</small><input name="dietary" placeholder="Let us know how to take care of you" /></label><label>Your message <small>(optional)</small><input name="message" placeholder="Leave a note for the couple" /></label>
+          <label>Wedding contribution <small>(optional)</small><input name="contribution" inputmode="decimal" placeholder="Contribution amount" /></label>
+          <div class="payment-details"><p>Mobile Money contribution</p><span>Patrick Baguma · <b>0783 342 859</b> / <b>0706 314 054</b></span><span>Muwanguzi Simon · <b>0743 161 242</b></span></div>
+          <p class="contribution-note">Please send your contribution by Mobile Money, then record the amount above. Your reply and personal guest card will be created right away.</p><button type="submit">Send our reply <span>→</span></button>
+        </form>
+      <div class="page-actions rsvp-actions"><button class="page-prev light" data-prev="4">← Back to details</button></div></section>
+    </main>
+    <footer><div class="monogram">S<span>&</span>E</div><p>Made with all our love</p><small>21 . 11 . 26</small></footer>
+    <section class="guest-card-modal" id="guest-card-modal" aria-hidden="true"><div class="guest-card-wrap"><button class="close-card" id="close-card" aria-label="Close card">×</button><article class="guest-card"><p class="eyebrow">Wedding guest card</p><div class="card-monogram">S<span>&</span>E</div><p class="guest-label">Honoured guest</p><h2 id="card-name">Guest Name</h2><div class="card-rule"></div><p class="card-copy">You are warmly welcomed to celebrate the wedding of<br /><strong>Muwanguzi Simon &amp; Esther Izabayo</strong></p><p class="card-venue">Victory Church Christian Center, Ndeeba<br /><span>Reception · Mikeke Gardens, Zanna</span></p><div class="card-footer"><span>21 . 11 . 26</span><b id="card-code">SE-000000</b></div></article><p class="card-instruction">Save this card and present it at the wedding entrance.</p><button class="download-card" id="download-card">Print / save my card</button></div></section>
+    <div class="toast" id="toast" role="status"></div><script src="app.js"></script>
+  </body>
+</html>
