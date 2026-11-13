@@ -26,6 +26,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Ga
 .sprig{display:block;width:100%;max-width:560px;height:auto;color:var(--sage)}
 .sprig .b{color:var(--blue)} .sprig .g{color:var(--gold)} .sprig .b circle{opacity:.95;stroke:var(--line);stroke-width:1}
 h1,h2,p{margin:0}
+.invitation-icon{display:block;width:58px;height:44px;margin:8px auto 2px;color:var(--gold)}
 .kicker{font-size:clamp(30px,9vw,44px);letter-spacing:.28em;font-weight:500;color:var(--gold);margin-top:6px;padding-left:.28em}
 .fam{margin-top:18px}
 .small{font-size:16px;color:var(--soft);font-style:italic}
@@ -78,6 +79,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 
 <main class="wrap">
   <div class="hero-in">
+    <svg class="invitation-icon" viewBox="0 0 64 48" aria-hidden="true">
+      <rect x="5" y="6" width="54" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="m7 9 25 20L57 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M32 39s-6-3.8-6-7.4a3.4 3.4 0 0 1 6-2.2 3.4 3.4 0 0 1 6 2.2C38 35.2 32 39 32 39Z" fill="currentColor"/>
+    </svg>
     <h1 class="kicker">INVITATION</h1>
 
     <div class="fam">
