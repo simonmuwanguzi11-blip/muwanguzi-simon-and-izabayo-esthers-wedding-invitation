@@ -1,59 +1,162 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muwanguzi Simon & Esther Izabayo — Wedding Invitation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@400;500&family=Montserrat:wght@400;500;600&family=Sacramento&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="grain"></div>
-    <header class="site-header">
-      <a href="#top" class="monogram" aria-label="Simon and Esther home">S<span>&</span>E</a>
-      <nav aria-label="Invitation navigation"><button data-page="1">Welcome</button><button data-page="2">Our story</button><button data-page="3">Gallery</button><button data-page="4">Details</button><button data-page="5">RSVP</button></nav>
-      <button class="sound" id="sound-button" aria-label="Toggle celebration music"><span>♪</span> <i>Music off</i></button>
-    </header>
-    <main id="top">
-      <section class="hero invite-page active" data-page-content="1">
-        <div class="arch arch-one"></div><div class="arch arch-two"></div>
-        <p class="eyebrow">The beginning of our forever</p><p class="script">A very special invitation</p><p class="open-prompt">Tap the envelope to open</p>
-        <button class="envelope-scene" id="envelope-toggle" aria-expanded="false" aria-label="Open wedding invitation envelope"><span class="envelope-back"></span><span class="letter"><i>Reserved for</i><b id="pass-guest-name">Our cherished guest</b><small><strong id="pass-guests">1</strong> guest · We invite you to celebrate<br />with us</small></span><span class="envelope-side left"></span><span class="envelope-side right"></span><span class="envelope-flap"></span><span class="seal">S<span>&amp;</span>E</span></button>
-        <div class="envelope-reveal" id="envelope-reveal"><p class="eyebrow">Together with their families</p><h1>Simon <em>&amp;</em> Esther</h1><div class="date-line"><span></span><p>Saturday · 21 · November</p><span></span></div><p class="year">Two thousand twenty-six</p><button class="rsvp-link page-next" data-next="2">See more details <b>↓</b></button></div>
-        <div class="hero-flower flower-left" aria-hidden="true">✿</div><div class="hero-flower flower-right" aria-hidden="true">❋</div>
-      </section>
-      <section class="intro invite-page cover-page" id="story" data-page-content="2">
-        <label class="cover-image" id="cover-image"><input type="file" id="cover-upload" accept="image/*" /><img id="cover-preview" alt="Simon and Esther cover photo" /><span><b>Simon &amp; Esther</b><small>Tap to add your beautiful cover photo</small></span></label>
-        <p class="eyebrow">The celebration begins</p><h2>Two hearts,<br />one beautiful forever.</h2><p class="copy">With joy in our hearts, we invite you to share in the beginning of our married life.</p><button class="page-next ink-button" data-next="3">Enter our story <span>→</span></button>
-      </section>
-      <section class="gallery-page invite-page" id="gallery" data-page-content="3"><p class="eyebrow">Moments to treasure</p><h2>Our gallery</h2><p class="copy">A few beautiful moments from our journey together.</p><label class="gallery-upload"><input type="file" id="gallery-input" accept="image/*" multiple /><span>+</span> Add your photos</label><div class="gallery-grid" id="gallery-grid"><div class="gallery-empty">Choose one or more photos to begin our gallery.</div></div><div class="page-actions gallery-actions"><button class="page-prev" data-prev="2">← Back</button><button class="page-next ink-button" data-next="4">Wedding details <span>→</span></button></div></section>
-      <section class="invite-page details-page" id="details" data-page-content="4"><div class="details">
-        <div class="detail-card ceremony"><p class="eyebrow">The ceremony</p><h3>At eleven o'clock</h3><p>Victory Church Christian Center<br />Ndeeba</p><a href="https://maps.google.com/?q=Victory+Church+Christian+Center+Ndeeba" target="_blank" rel="noreferrer">Open ceremony map <b>↗</b></a></div>
-        <div class="ring-art" aria-hidden="true"><div></div><span></span></div>
-        <div class="detail-card reception"><p class="eyebrow">Dinner &amp; dancing</p><h3>From six o'clock</h3><p>Mikeke Gardens, Zanna<br />Following the ceremony</p><a href="https://maps.google.com/?q=Mikeke+Gardens+Zanna" target="_blank" rel="noreferrer">Get directions <b>↗</b></a></div>
-      </div><section class="calendar-card"><p class="eyebrow">Save the date</p><div class="calendar-date"><span>Saturday</span><b>21</b><span>November · 2026</span></div><p>11:00 AM · Victory Church Christian Center, Ndeeba</p></section>
-      <section class="notes">
-        <div><p class="eyebrow">Dress code</p><h3>Garden formal</h3><p>Soft pastels, summer linens, and a little flourish encouraged.</p></div>
-        <div><p class="eyebrow">An unplugged moment</p><h3>Be all here</h3><p>Please tuck away phones during the ceremony. Our photographer has every memory covered.</p></div>
-        <div><p class="eyebrow">With love</p><h3>Adults only</h3><p>We adore your little ones, but have reserved this evening for our grown-up guests.</p></div>
-      </section><section class="countdown"><p class="script">Counting down to forever</p><div id="countdown-timer"><div><b>00</b><span>Days</span></div><div><b>00</b><span>Hours</span></div><div><b>00</b><span>Min</span></div><div><b>00</b><span>Sec</span></div></div></section><section class="gift-card"><p class="eyebrow">A gift from the heart</p><h3>Your presence is our greatest gift.</h3><p>For those who would like to bless our new beginning, a contribution may be sent by Mobile Money.</p><a href="#rsvp" class="page-next" data-next="5">View gift details <b>→</b></a></section><div class="page-actions"><button class="page-prev" data-prev="3">← Back</button><button class="page-next ink-button" data-next="5">RSVP to celebrate <span>→</span></button></div></section>
-      <section class="rsvp-section invite-page" id="rsvp" data-page-content="5">
-        <div class="rsvp-intro"><p class="eyebrow">Kindly respond by 15 September</p><h2>Will you join us?</h2><p>We cannot wait to celebrate with the people who have made our story so full of love.</p></div>
-        <form id="rsvp-form" class="rsvp-form">
-          <label>Your name<input required name="name" placeholder="First and last name" /></label><label>Email address<input required type="email" name="email" placeholder="you@example.com" /></label>
-          <label>Phone number<input required name="phone" inputmode="tel" placeholder="Your phone number" /></label><label>Guests attending<input required name="guests" type="number" min="1" value="1" /></label>
-          <div class="attendance"><p>Will you be celebrating with us?</p><label><input type="radio" name="attendance" value="Joyfully accepts" required /><span>Joyfully accepts</span></label><label><input type="radio" name="attendance" value="Regretfully declines" /><span>Regretfully declines</span></label></div>
-          <label>Dietary notes <small>(optional)</small><input name="dietary" placeholder="Let us know how to take care of you" /></label><label>Your message <small>(optional)</small><input name="message" placeholder="Leave a note for the couple" /></label>
-          <label>Wedding contribution <small>(optional)</small><input name="contribution" inputmode="decimal" placeholder="Contribution amount" /></label>
-          <div class="payment-details"><p>Mobile Money contribution</p><span>Patrick Baguma · <b>0783 342 859</b> / <b>0706 314 054</b></span><span>Muwanguzi Simon · <b>0743 161 242</b></span></div>
-          <p class="contribution-note">Please send your contribution by Mobile Money, then record the amount above. Your reply and personal guest card will be created right away.</p><button type="submit">Send our reply <span>→</span></button>
-        </form>
-      <div class="page-actions rsvp-actions"><button class="page-prev light" data-prev="4">← Back to details</button></div></section>
-    </main>
-    <footer><div class="monogram">S<span>&</span>E</div><p>Made with all our love</p><small>21 . 11 . 26</small></footer>
-    <section class="guest-card-modal" id="guest-card-modal" aria-hidden="true"><div class="guest-card-wrap"><button class="close-card" id="close-card" aria-label="Close card">×</button><article class="guest-card"><p class="eyebrow">Wedding guest card</p><div class="card-monogram">S<span>&</span>E</div><p class="guest-label">Honoured guest</p><h2 id="card-name">Guest Name</h2><div class="card-rule"></div><p class="card-copy">You are warmly welcomed to celebrate the wedding of<br /><strong>Muwanguzi Simon &amp; Esther Izabayo</strong></p><p class="card-venue">Victory Church Christian Center, Ndeeba<br /><span>Reception · Mikeke Gardens, Zanna</span></p><div class="card-footer"><span>21 . 11 . 26</span><b id="card-code">SE-000000</b></div></article><p class="card-instruction">Save this card and present it at the wedding entrance.</p><button class="download-card" id="download-card">Print / save my card</button></div></section>
-    <div class="toast" id="toast" role="status"></div><script src="app.js"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simon & Esther — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --paper:#f7f1e4; --paper2:#efe5d0; --ink:#2b3a55; --soft:#5d6677; --gold:#9a7440; --blue:#f0e1bd; --glow:#fff5d9; --sage:#7b8a69; --line:#c9ad7c; --card:rgba(255,252,244,.72);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--paper:#1c2230; --paper2:#232b3d; --ink:#eef1f7; --soft:#aab3c5; --gold:#d3ad72; --blue:#ead9b0; --glow:#3a4560; --sage:#9fb08c; --line:#8a7348; --card:rgba(35,43,61,.75);}
+}
+:root[data-theme="dark"]{--paper:#1c2230; --paper2:#232b3d; --ink:#eef1f7; --soft:#aab3c5; --gold:#d3ad72; --blue:#ead9b0; --glow:#3a4560; --sage:#9fb08c; --line:#8a7348; --card:rgba(35,43,61,.75);}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;font-size:19px;line-height:1.55;text-align:center;
+  background-image:radial-gradient(60% 30% at 85% 12%,color-mix(in srgb,var(--glow) 90%,transparent),transparent 70%),radial-gradient(55% 28% at 8% 55%,color-mix(in srgb,var(--gold) 16%,transparent),transparent 70%),radial-gradient(60% 30% at 90% 92%,color-mix(in srgb,var(--glow) 80%,transparent),transparent 70%);
+  background-attachment:fixed}
+.wrap{max-width:560px;margin:0 auto;padding:0 22px 48px}
+.sprig{display:block;width:100%;max-width:560px;height:auto;color:var(--sage)}
+.sprig .b{color:var(--blue)} .sprig .g{color:var(--gold)} .sprig .b circle{opacity:.95;stroke:var(--line);stroke-width:1}
+h1,h2,p{margin:0}
+.kicker{font-size:clamp(30px,9vw,44px);letter-spacing:.28em;font-weight:500;color:var(--gold);margin-top:6px;padding-left:.28em}
+.fam{margin-top:18px}
+.small{font-size:16px;color:var(--soft);font-style:italic}
+.parents{font-size:21px;font-weight:600;line-height:1.35;margin:2px 0 8px}
+.rule{display:flex;align-items:center;gap:12px;margin:26px auto;max-width:300px;color:var(--gold)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:var(--line)}
+.lug{font-size:18px;line-height:1.5}
+.inv{color:var(--gold);font-size:19px;margin-top:6px}
+.names{font-family:"Pinyon Script","Snell Roundhand","Apple Chancery",cursive;font-weight:400;font-size:clamp(64px,22vw,104px);line-height:1.02;color:var(--ink);margin:6px 0 4px}
+.names .amp{display:block;font-size:.5em;color:var(--gold);line-height:1}
+.date{font-size:clamp(26px,8vw,34px);letter-spacing:.12em;font-weight:500;margin-top:10px}
+.sub{color:var(--soft)}
+.when{display:grid;gap:14px;margin-top:26px;text-align:left}
+.ev{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:2px}
+.ev h2{font-size:15px;letter-spacing:.14em;color:var(--gold);font-weight:600;text-transform:none}
+.ev .t{font-size:26px;font-weight:600;line-height:1.2}
+.ev .p{font-size:18px;color:var(--soft)}
+.ev a.map{justify-self:start;margin-top:8px;color:var(--ink);font-weight:600;font-size:17px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px;padding:6px 0}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:30px auto 0;max-width:380px}
+.count div{border-top:1px solid var(--line);padding-top:8px}
+.count b{display:block;font-size:34px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1.1}
+.count span{font-size:15px;color:var(--soft)}
+.rsvp{margin-top:34px;border:1px solid var(--line);border-radius:14px;padding:22px 18px 10px;background:var(--card);outline:1px solid color-mix(in srgb,var(--line) 55%,transparent);outline-offset:-7px}
+.rsvp h2{font-size:30px;color:var(--gold);font-weight:500;letter-spacing:.12em;padding-left:.12em}
+.contacts{display:grid;gap:4px;margin-top:10px}
+.contacts a{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--ink);padding:12px 8px;border-bottom:1px solid color-mix(in srgb,var(--line) 50%,transparent);text-align:left;min-height:48px}
+.contacts a:last-child{border-bottom:0}
+.contacts small{display:block;font-size:15px;color:var(--soft);line-height:1.2}
+.contacts strong{font-size:21px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.foot{margin-top:30px;font-size:17px;color:var(--soft);font-style:italic}
+.hero-in{animation:rise 1.1s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-in{animation:none}}
+@media (max-width:380px){.contacts strong{font-size:19px}}
+</style>
+</head>
+<body>
+
+<svg class="sprig" viewBox="0 0 560 120" aria-hidden="true" preserveAspectRatio="xMidYMin slice">
+  <g fill="currentColor" opacity=".85">
+    <path d="M0 10C40 20 80 40 110 80C70 78 30 56 0 10Z" opacity=".7"/>
+    <path d="M30 0C70 6 110 30 135 66C95 64 55 40 30 0Z" opacity=".5"/>
+    <path d="M560 6C520 18 480 40 450 84C492 80 530 56 560 6Z" opacity=".7"/>
+    <path d="M520 0C486 8 450 28 425 60C464 58 500 36 520 0Z" opacity=".45"/>
+  </g>
+  <g class="b"><circle cx="150" cy="40" r="26" fill="currentColor" opacity=".55"/><circle cx="150" cy="40" r="14" fill="currentColor" opacity=".5"/><circle cx="118" cy="22" r="14" fill="currentColor" opacity=".4"/></g>
+  <g class="g"><circle cx="415" cy="36" r="24" fill="currentColor" opacity=".45"/><circle cx="415" cy="36" r="11" fill="currentColor" opacity=".55"/><circle cx="388" cy="16" r="10" fill="currentColor" opacity=".35"/></g>
+</svg>
+
+<main class="wrap">
+  <div class="hero-in">
+    <h1 class="kicker">INVITATION</h1>
+
+    <div class="fam">
+      <p class="small">The family of</p>
+      <p class="parents">Mr. Muwanguzi Yazidi &amp; Mrs. Muwanguzi Florence</p>
+      <p class="small">together with the family of</p>
+      <p class="parents">Mr. Tulyareba Francis &amp; Mrs. Tulyareba Annet</p>
+      <p class="inv">invite you to the wedding ceremony of their children</p>
+    </div>
+
+    <div class="rule" aria-hidden="true">✦</div>
+
+    <p class="lug" lang="lg">Abenju y’Omwami Muwanguzi Yazidi ne mukyala we Muwanguzi Florence awamu na benju y’Omwami Tulyareba Francis ne mukyala we Tulyareba Annet nessanyu lingi bayita</p>
+    <p class="inv" lang="lg" style="margin-top:14px">okubeerawo ku mbaga y’abaana baabwe</p>
+
+    <p class="names">Simon <span class="amp">&amp;</span> Esther</p>
+    <p class="date">21 . 11 . 2026</p>
+    <p class="sub">Saturday</p>
+  </div>
+
+  <div class="count" id="count" role="timer" aria-label="Countdown to the wedding">
+    <div><b id="d">–</b><span>days</span></div>
+    <div><b id="h">–</b><span>hours</span></div>
+    <div><b id="m">–</b><span>minutes</span></div>
+    <div><b id="s">–</b><span>seconds</span></div>
+  </div>
+
+  <section class="when" aria-label="Wedding programme">
+    <article class="ev">
+      <h2>CEREMONY</h2>
+      <p class="t">10:30 AM</p>
+      <p class="p">Victory Church Ndebba</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Victory+Church+Ndebba+Kampala" target="_blank" rel="noopener">Get directions to the church</a>
+    </article>
+    <article class="ev">
+      <h2>RECEPTION</h2>
+      <p class="t">2:00 PM</p>
+      <p class="p">Little Rock Gardens Zzana</p>
+      <p class="p" lang="lg" style="font-style:italic">Ku saawa munana (8) Ezo Iweggulo</p>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Little+Rock+Gardens+Zzana+Kampala" target="_blank" rel="noopener">Get directions to the reception</a>
+    </article>
+  </section>
+
+  <section class="rsvp" aria-label="RSVP">
+    <h2>RSVP</h2>
+    <div class="contacts">
+      <a href="tel:+256783342859"><span><small>Pr.</small>Buguma Patrick</span><strong>0783 342 859</strong></a>
+      <a href="tel:+256772378094"><span><small>Pr.</small>Yazid Muwanguzi</span><strong>0772 378 094</strong></a>
+      <a href="tel:+256743161242"><span><small>Mr.</small>Muwanguzi Simon</span><strong>0743 161 242</strong></a>
+    </div>
+  </section>
+
+  <p class="small" style="margin-top:26px;letter-spacing:.06em">Kindly note: this is an adults-only celebration. No children, please.</p>
+
+  <p class="foot">We would be honoured to celebrate with you.</p>
+</main>
+
+<svg class="sprig" viewBox="0 0 560 100" aria-hidden="true" preserveAspectRatio="xMidYMax slice" style="transform:scaleY(-1)">
+  <g fill="currentColor" opacity=".8">
+    <path d="M0 10C40 20 80 40 110 80C70 78 30 56 0 10Z" opacity=".6"/>
+    <path d="M560 6C520 18 480 40 450 84C492 80 530 56 560 6Z" opacity=".6"/>
+  </g>
+  <g class="b"><circle cx="90" cy="30" r="24" fill="currentColor" opacity=".5"/><circle cx="90" cy="30" r="12" fill="currentColor" opacity=".5"/></g>
+  <g class="g"><circle cx="470" cy="30" r="22" fill="currentColor" opacity=".45"/><circle cx="470" cy="30" r="10" fill="currentColor" opacity=".55"/></g>
+</svg>
+
+<script>
+(function(){
+  var target=new Date("2026-11-21T10:30:00+03:00").getTime();
+  var ids=["d","h","m","s"].map(function(i){return document.getElementById(i)});
+  function pad(n){return n<10?"0"+n:""+n}
+  function tick(){
+    var diff=target-Date.now();
+    if(diff<=0){document.getElementById("count").style.display="none";return}
+    var d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),m=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);
+    ids[0].textContent=d;ids[1].textContent=pad(h);ids[2].textContent=pad(m);ids[3].textContent=pad(s);
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+</body>
 </html>
